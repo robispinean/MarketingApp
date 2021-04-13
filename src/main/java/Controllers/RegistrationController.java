@@ -2,12 +2,17 @@ package Controllers;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.Statement;
+import java.util.Objects;
 import java.util.UUID;
 import AlertMessages.Message;
+import javafx.stage.Stage;
 
 public class RegistrationController {
     ObservableList role = FXCollections.observableArrayList(
@@ -54,11 +59,18 @@ public class RegistrationController {
             stmt.executeUpdate("INSERT INTO APP_USERS VALUES ('" + id +"', '" + EncodedPassword + "', '" + roleBox.getValue().toString() + "', '" + email.getText() + "')");
             System.out.println("Added new user with id: " + id + " name: " + email.getText() + " Role: " + roleBox.getValue().toString());
 
-            msg.setMessage("Registration Complete!");
+            registerButton.getScene().getWindow().hide();
+            Stage login = new Stage();
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("login.fxml")));
+            Scene scene = new Scene(root);
+            login.setScene(scene);
+            login.show();
+
             c.closeConnection(con);
             return true;
         }catch(Exception e){
             System.out.println(e);
+            msg.setMessage("Registration Failed!");
             return false;
         }
     }
