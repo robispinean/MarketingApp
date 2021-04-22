@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="221.0" prefWidth="437.0" style="-fx-background-color: #5c5b59;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RegistrationController">
+   <children>
+
+      <TextField fx:id="email" layoutX="144.0" layoutY="51.0" promptText="email" style="-fx-background-color: #828282;" />
+      <PasswordField fx:id="password" layoutX="144.0" layoutY="86.0" promptText="password" style="-fx-background-color: #828282;" />
+      <ChoiceBox fx:id="roleBox" layoutX="144.0" layoutY="122.0" prefWidth="150.0" style="-fx-background-color: #828282;" />
+      <Button fx:id="registerButton" layoutX="161.0" layoutY="167.0" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color: #828282;" text="Register" />
+   </children>
+</AnchorPane>
