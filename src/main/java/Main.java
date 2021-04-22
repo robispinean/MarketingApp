@@ -12,9 +12,9 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
 
 
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("login.fxml")));
-        primaryStage.setTitle("Login Page");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("HomePage.fxml")));
+        primaryStage.setTitle("Home Page");
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 
