@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -16,11 +18,13 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.awt.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class HomePageController implements Initializable{
@@ -50,6 +54,9 @@ public class HomePageController implements Initializable{
     @FXML
     private HBox ItemLayout;
 
+    @FXML
+    private Button CartButton;
+
     public Button AddToCart;
 
 
@@ -78,6 +85,7 @@ public class HomePageController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources){
+        System.out.println(cart);
         items = is.getItems();
         System.out.println(items);
         if(items.size() > 0){
@@ -107,4 +115,15 @@ public class HomePageController implements Initializable{
         }
     }
 
+    public void openCart() {
+        try{
+            Stage cart = new Stage();
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("Cart.fxml")));
+            Scene scene = new Scene(root);
+            cart.setScene(scene);
+            cart.show();
+        }catch (Exception e){
+            System.out.println(e);
+        }
+    }
 }

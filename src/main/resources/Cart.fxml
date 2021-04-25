@@ -80,7 +80,7 @@
                         </ButtonBar>
                   <ButtonBar prefHeight="40.0" prefWidth="320.0">
                      <buttons>
-                        <Button fx:id="closeButton" minWidth="6.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: cc0000;" text="Back" textAlignment="CENTER" textFill="WHITE" />
+                        <Button fx:id="closeButton" minWidth="6.0" mnemonicParsing="false" onAction="#returnHomePage" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: cc0000;" text="Back" textAlignment="CENTER" textFill="WHITE" />
                      </buttons>
                   </ButtonBar>
                     </children>
