@@ -24,14 +24,14 @@ public class Item {
     }
 
     public String getImagePath() {
-        return '"' + imagePath + '"';
+        return imagePath;
     }
 
     public void setImagePath(String imagePath) {
         this.imagePath = imagePath;
     }
 
-    public Double getPrice() {
+    public double getPrice() {
         return price;
     }
 
@@ -56,7 +56,7 @@ public class Item {
         return "{" +
                 "name='" + name + '\'' +
                 ", price=" + price +
-                ", imagPath=" + imagePath +
+                ", imagePath=" + imagePath +
                 '}';
     }
 
