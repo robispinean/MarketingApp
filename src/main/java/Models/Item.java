@@ -56,7 +56,7 @@ public class Item {
         return "{" +
                 "name='" + name + '\'' +
                 ", price=" + price +
-                ", imagePath=" + imagePath +
+                ", description=" + description +
                 '}';
     }
 

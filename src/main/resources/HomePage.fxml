@@ -134,7 +134,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
                         </Text>
-                        <Button fx:id="CartButton" mnemonicParsing="false" onAction="#openCart" text="Button">
+                        <Button fx:id="CartButton" mnemonicParsing="false" onAction="#openCart" text="Cart">
                            <graphic>
                               <ImageView fx:id="Cart" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
