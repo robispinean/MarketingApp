@@ -48,7 +48,7 @@ public class ItemController {
             itemImage.setImage(image);
         }catch(Exception e){
             System.out.println(item.getId() + " " + item.getName() + " " + item.getImagePath() + " " + e);
-            Image image = new Image("img/item2.png");
+            Image image = new Image("img/item1.png");
             itemImage.setImage(image);
         }
     }

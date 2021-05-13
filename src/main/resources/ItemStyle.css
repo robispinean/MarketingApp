@@ -1,0 +1,10 @@
+
+.text{
+-fx-font-family: 'Segoe UI', Arial, sans-serif;
+-fx-font-size:15pt;
+}
+
+.item:hover{
+    -fx-background-color: #75bdff;
+    -fx-scale-y: 1.05;
+}
