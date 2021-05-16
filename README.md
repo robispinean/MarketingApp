@@ -14,3 +14,11 @@ If the order is rejected, the rejection reason will also be displayed.
 If the order has been accepted, the estimated delivery time will also be displayed. 
 ### Shop Employee:
 After a shop employee logs in, he can process orders, assure home delivery, update order's status and getting customer's delivery-time feedback.
+
+# To run this project you need to open a console in the project folder and run:
+
+## ./mvnw clean install 
+
+## cd target
+
+## java -jar MarketingApp.jar
