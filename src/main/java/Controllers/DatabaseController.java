@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class DatabaseController {
     //URL of Oracle database server
-    private static String url = "jdbc:oracle:thin:@localhost:1521:xe";;
+    private static String url = "jdbc:oracle:thin:@localhost:1521:xe";
 
     public Connection connectDatabase() throws SQLException {
         try {
@@ -22,8 +22,8 @@ public class DatabaseController {
         }catch(Exception e)
         {
             System.out.println(e);
+            return null;
         }
-        return null;
     }
 
     public boolean closeConnection(Connection con) throws SQLException {

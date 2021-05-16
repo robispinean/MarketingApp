@@ -8,6 +8,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +49,7 @@ public class UserService {
     public List<User> getUsers(){
         try {
             Connection con = c.connectDatabase();
-            List<User> users = new ArrayList<>();
+            List<User> users = new ArrayList<User>();
             final String str= "SELECT * FROM APP_USERS";
             java.sql.PreparedStatement stmt=con.prepareStatement(str);
             ResultSet results=stmt.executeQuery();
@@ -60,7 +61,7 @@ public class UserService {
             return users;
         }catch(Exception e){
             System.out.println(e);
-            return new ArrayList<>();
+            return new ArrayList<User>();
         }
     }
 
