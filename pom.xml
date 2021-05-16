@@ -20,6 +20,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
                 <configuration>
                     <source>8</source>
                     <target>8</target>
@@ -41,8 +42,8 @@
                         <manifest>
                             <mainClass>Main</mainClass>
                         </manifest>
-                        <appendAssemblyId>false</appendAssemblyId>
                     </archive>
+                    <appendAssemblyId>false</appendAssemblyId>
                 </configuration>
                 <executions>
                     <execution>
