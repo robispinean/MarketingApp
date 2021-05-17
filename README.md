@@ -15,7 +15,11 @@ If the order has been accepted, the estimated delivery time will also be display
 ### Shop Employee:
 After a shop employee logs in, he can process orders, assure home delivery, update order's status and getting customer's delivery-time feedback.
 
-# To run this project you need to open a console in the project folder and run:
+# To run this project you need:
+
+## oracle db xe 11g
+
+# Run in console:
 
 ## mvn -N io.takari:maven:wrapper
 
