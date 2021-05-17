@@ -17,6 +17,8 @@ After a shop employee logs in, he can process orders, assure home delivery, upda
 
 # To run this project you need to open a console in the project folder and run:
 
+## mvn -N io.takari:maven:wrapper
+
 ## ./mvnw clean install 
 
 ## cd target
