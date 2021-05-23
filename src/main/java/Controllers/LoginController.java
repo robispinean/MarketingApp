@@ -81,7 +81,6 @@ public class LoginController {
             Scene scene = new Scene(root);
             login.setScene(scene);
             login.show();
-            msg.setConfirmationMessage("Registration Completed you can login!");
         }
         catch (Exception e){
             System.out.println(e);
