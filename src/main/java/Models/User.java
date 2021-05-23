@@ -5,11 +5,13 @@ public class User {
     String id;
     String email;
     String role;
+    String password;
 
-    public User(String id, String email,String role) {
+    public User(String id, String email,String role, String password) {
         this.id = id;
         this.email = email;
         this.role = role;
+        this.password = password;
     }
 
     public String getEmail() {
@@ -22,6 +24,10 @@ public class User {
 
     public String getRole() {
         return role;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     @Override
