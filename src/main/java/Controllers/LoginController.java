@@ -43,8 +43,20 @@ public class LoginController {
                 hashPassword = service.hashPassword(password.getText(),u.getID());
                 if(hashPassword.equals(u.getPassword())){
                     if(roleBox.getValue().toString().equals(u.getRole())){
-                        //go to main page
-                        return true;
+                        try {
+                            registerButton.getScene().getWindow().hide();
+                            Stage homepage = new Stage();
+                            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("HomePage.fxml")));
+                            Scene scene = new Scene(root);
+                            homepage.setScene(scene);
+                            homepage.show();
+                            msg.setConfirmationMessage("Login completed!");
+                            return true;
+                        }
+                        catch(Exception e){
+                            System.out.println(e);
+                            return false;
+                        }
                     }
                     else{
                         msg.setWarningMessage("Invalid role!");
