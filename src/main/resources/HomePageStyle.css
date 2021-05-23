@@ -1,0 +1,22 @@
+.right-bar{
+    -fx-background-color:#86868a;
+}
+
+.search-box{
+    -fx-background-color:#FFFFFF;
+    -fx-background-radius:30;
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.search-button{
+    -fx-background-color: #3561ab;
+    -fx-background-radius:30;
+
+}
+
+.shadow-effect{
+    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 10.0, 0.0, 0.0, 10.0);
+}
