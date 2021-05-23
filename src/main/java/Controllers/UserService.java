@@ -54,7 +54,7 @@ public class UserService {
             java.sql.PreparedStatement stmt=con.prepareStatement(str);
             ResultSet results=stmt.executeQuery();
             while(results.next()){
-                User s = new User(results.getString("id"), results.getString("email"), results.getString("role"));
+                User s = new User(results.getString("id"), results.getString("email"), results.getString("role"),results.getString("password"));
                 users.add(s);
             }
             c.closeConnection(con);
@@ -73,7 +73,7 @@ public class UserService {
     public boolean addUserToDB(String email, String password, String role){
         try {
             if (!Validate(email,password)){
-                msg.setWarningMessage("Invalid email or password");
+                msg.setWarningMessage("Email has to be at least 10 characters long and the password 6");
                 return false;
             }
 
@@ -93,7 +93,7 @@ public class UserService {
             Statement stmt=con.createStatement();
             stmt.executeUpdate("INSERT INTO APP_USERS VALUES ('" + id +"', '" + EncodedPassword + "', '" + role + "', '" + email + "')");
 
-            User newUser = new User(id, email, role);
+            User newUser = new User(id, email, role, EncodedPassword);
             users.add(newUser);
 
             System.out.println("Added new user with id: " + id + " email: " + email + " Role: " + role);

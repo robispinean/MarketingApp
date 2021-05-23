@@ -1,3 +1,4 @@
+import Controllers.DatabaseController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,11 +8,12 @@ import javafx.stage.Stage;
 import java.util.Objects;
 
 public class Main extends Application {
-
+    DatabaseController db = new DatabaseController();
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("HomePage.fxml")));
-        primaryStage.setTitle("Home Page");
+        db.initialize();
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("login.fxml")));
+        primaryStage.setTitle("Login Page");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
